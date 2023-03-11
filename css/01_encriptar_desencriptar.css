@@ -1,0 +1,399 @@
+/********************** PALETA DE COLORES *****************/
+/* backround: #FE0AB7;          Fucsia Neon*/
+/* backround: #24E0FF;          Azul Neon*/
+/* backround: #F5D300;          Amarillo Neon*/
+/* backround: #09FBD3;          Verde Neon*/
+
+html {   
+    min-width: 320px;   
+    max-width: 1400px; 
+    }
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Indie Flower', cursive;
+}
+
+.bodyContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    height: 95%;
+    background: #000000;        /* Black */
+}
+
+.containerPrincipal{
+    display: flex;
+}
+/********************************** LEFT SECTION ***********************************************/
+.sectionLeft{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*************** ENCABEZADO ***************/
+.encabezado{
+    display: flex;
+    height: 20%;
+    align-items: center;
+}
+.logoAlura{
+    width: 90px;
+}
+.tituloEncabezado{
+    flex-grow: 3;
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;  /*Determina el espaciado entre las líneas*/
+    color: #24E0FF;
+}
+.titulo1{
+    font-weight: bold;
+    font-size: 18px;
+}
+.titulo2{    
+    font-family: 'Inter', sans-serif;
+    color: #24E0FF;
+    margin-top: 2px;
+}
+
+/******* CUADRO INGRESAR TEXTO *********/
+.containerIngresoTexto{
+    flex-grow: 2;
+    text-align: center;
+    height: 62%;
+}
+.cuadroIngresarTexto{
+    width: 65%;
+    height: 90%;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;       /*Grosor*/
+    font-size: 32px;
+    line-height: 150%;      /* identical to box height, or 48px */
+    text-align: left;
+    color: #999da1;       /* Dark blue/dark-blue-300 */
+
+    border:1px solid #000000;
+    border-radius: 10px;
+    background: #000000;
+    outline: none;          /*elimina el borde automatico que contiene la celda de cuando se ingresa la entrada*/
+    transition: 0.2s;
+    /*box-shadow: -10px -10px 20px -4px rgba(7, 43, 97, 0.23);*/
+}
+::placeholder{
+    color: rgba(254, 10, 183, 0.7);
+}
+.cuadroIngresarTexto:focus{
+    border: 3px hidden;
+    border-radius: 10px;
+    background: #fe0ab7;
+    color: rgba(0, 0, 0, 0.80);
+    opacity: 90%;
+    box-shadow: 1px 1px 10px 1px rgb(254, 10, 183, 0.8);
+}
+
+/********** ACLARACION ************/
+.aclaracion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    height: 3%;
+}
+.imagenAclaracion{
+    width: 16px;
+    height: 16px;
+    margin-left: 5%;
+}
+.textoAclaracion{
+    width: 205px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;  /* identical to box height, or 18px */
+    color: #FE0AB7;   /* Gray/gray-400 */
+    opacity: 0.8;
+}
+
+/***************** BUTTONS ***************/
+.botones_EncDesenc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    height: 15%;
+}
+
+.botonEncriptar{
+    padding: 2%;  
+    width: 35%;
+    background: #000000;    /* Dark blue/dark-blue-300 */
+    border-radius: 24px;
+    border: 1px solid #24e0ff;
+    box-shadow: 1px 1px 10px 1px rgba(36, 224, 255, 0.85);
+
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    color: #24E0FF;
+}
+.botonEncriptar:hover{
+    background: #24E0FF;    /* Dark blue/dark-blue-300 */
+    border-radius: 24px;
+    border: 1px solid #24E0FF;
+    color: rgb(0, 0, 0, 0.8);
+}
+/*.textoBotonEncriptar{   /*Se traslada el contenido a .botonEncriptar*/
+  /* font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    color: #24E0FF;
+}*/
+
+.botonDesencriptar{
+    padding: 2%;
+    width: 35%;
+    background: #000000;        /* Light gray */
+    border: 1px solid #24E0FF;  /* Dark blue/dark-blue-300 */
+    border-radius: 24px;
+    box-shadow: 1px 1px 10px 1px rgba(36, 224, 255, 0.85);
+    
+    font-family: 'Inter';
+    font-weight:600;
+    font-size: 20px;
+    line-height: 19px;
+    color: #24E0FF;
+}
+.botonDesencriptar:hover{
+    background: #24E0FF;    /* Dark blue/dark-blue-300 */
+    border-radius: 24px;
+    border: 1px solid #24E0FF;
+    color: rgb(0, 0, 0, 0.8);
+}
+/*.textoBotonDesencriptar{    /*Se traslada el contenido a .botonDESencriptar*/
+    /*font-family: 'Inter';
+    font-weight:600;
+    font-size: 20px;
+    line-height: 19px;
+    color: #0A3871;         /* Dark blue/dark-blue-300 */
+/*}*/
+
+/************************************** RIGHT SECTION ***********************************************/
+.sectionRight{
+    width: 35%;
+}
+
+#cuadroResultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: 88%;
+    text-align: center;
+    margin: 5% auto;
+    background: #000000;
+    box-shadow: 0px 20px 30px 5px rgba(36, 224, 255, 0.83);   /* shadow */  /*Dark blue/dark-blue-400 */
+    border-radius: 32px;
+    /*border: 1px solid #24e0ff;*/
+    transition: 0.5s;
+}
+
+#cuadroResultado:hover{
+    box-shadow: 0px 20px 32px 5px rgba(254, 10, 183, 0.68);   /* shadow */  /*Dark blue/dark-blue-400 */
+} /*rgb(221, 72, 72)    /*red */ 
+
+.resultadoItem{
+    text-align: center;
+    flex-grow: 3;
+}
+.textoResultado{
+    width: 90%;
+    height: 100%;
+    background: #000000;
+    margin-top: 10px;
+
+    font-family: 'Indie Flower', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;      /* identical to box height, or 48px */
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FE0AB7;         /* Dark blue/dark-blue-300 */
+
+    border: none;
+    border-radius: 10px;
+    outline: none;                              /*elimina el borde automatico que contiene la celda de cuando se ingresa la entrada*/
+}
+
+#imagenYtextoNoEncontrado{
+    text-align: center;
+}
+/*********** Muñeco ****************/
+.imagenBusqueda{
+    width: 80%;
+    height: 60%;
+}
+
+#cuadroMensajeNoEncontrado{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+}
+.texto1NoEncontrado{
+    width: 90%;
+    height: 30%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;  /* or 29px */
+    text-align: center;
+    color: #fe0ab992;
+}
+.texto2NoEncontrado{
+    width: 90%;
+    height: 30%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;  /* or 24px */
+    text-align: center;
+    color: #fe0ab992;
+}
+
+.botonCopiar{
+    background: #24E0FF;    /* Dark blue/dark-blue-300 */
+    border-radius: 0 0 24px 24px;
+    border: 1px solid #24E0FF;
+
+    width: 100%;
+    height: 58px;
+    display:none;
+    
+    text-align: center;
+    color: #000000;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+}
+.botonCopiar:hover{
+    background: #FE0AB7;
+    border: 1px solid #FE0AB7;
+    color: #0a387196;
+    font-weight: 900;
+}
+.botonCopiar:active{
+    box-shadow: 0px 0px 2px 1px rgba(235, 138, 52, 0.38);
+}
+
+footer{
+    display: flex;
+    height: 5%;
+    gap: 5px;
+    background: #FE0AB7;    /*Dark blue/dark-blue-400 */
+
+    justify-content: center;
+    align-items: center;
+}
+
+footer:hover{
+    box-shadow: 0px -2px 11px -2px rgb(254, 10, 183, 0.98);
+}
+
+a{
+    text-align: center;
+    padding: 2px 6px;
+}
+
+.textoAutor{
+    flex-grow: 2;
+    text-align: center;
+    font-family: 'indie flower';
+    font-size: 18px;
+    font-weight: 550;
+    padding:12px 6px;
+    color: #000000;
+}
+
+.textoAutor:hover{
+    font-size: 19px;
+    font-weight:550;
+}
+
+@media only screen and (max-width: 768px) {
+    .bodyContainer{
+        height: auto;
+    }
+    main{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .containerPrincipal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sectionLeft{
+        height: 700px;
+        width: auto;
+    }
+    .encabezado{
+        width: auto;
+    }
+    .cuadroIngresarTexto{
+        font-size: 18px;
+    }
+    .aclaracion{
+        justify-content: center;
+    }
+    .botones_EncDesenc{
+        flex-direction: column;    
+        gap: 15px;
+    }
+    .botonEncriptar{
+        flex-grow: 1;
+        width: 70%;
+    }
+    .botonDesencriptar{
+        flex-grow: 1;
+        width: 70%;
+    }
+    .sectionRight{
+        height: auto;
+        width: auto;
+    }
+    #cuadroResultado{
+        height: 500px;
+    }
+    .resultadoItem{
+        flex-grow: 2;        
+    }
+    .textoResultado{
+        flex-grow: 2;
+    }
+    #imagenYtextoNoEncontrado{
+        flex-grow: 1;
+    }
+    .imagenBusqueda{
+        width: 150px;
+        height: 150px;
+    }
+}
